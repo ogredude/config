@@ -6,6 +6,10 @@
 
 # vim submodules
 
+[submodule "dotfiles/.vim/bundle/vividchalk"]
+  path = dotfiles/.vim/bundle/vividchalk
+  url = https://github.com/tpope/vim-vividchalk.git
+
 [submodule "dotfiles/.vim/bundle/theme-jellybeans"]
   path = dotfiles/.vim/bundle/theme-jellybeans
   url = https://github.com/nanotech/jellybeans.vim.git

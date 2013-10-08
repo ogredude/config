@@ -74,7 +74,7 @@ let vimclojure#ParenRainbow = 1 " Rainbow parentheses'!
 
 if has('gui_running')
 
-  colorscheme monokai_modified
+  colorscheme vividchalk
 
   " for Gui versions of vim. see :help guioptions for more info
   set guioptions=aAce
@@ -99,13 +99,8 @@ elseif version >= 700 && &term != 'cygwin'
 
   " configure 256 color schemes for terminal using CSApprox or guicolorscheme
   set t_Co=256
-  if has('gui')
     let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-    colorscheme monokai_modified
-  else
-    runtime! bundle/plugin-guicolorscheme/plugin/guicolorscheme.vim
-    GuiColorScheme monokai_modified
-  endif
+    colorscheme vividchalk
 
 endif
 
@@ -362,3 +357,5 @@ map! <Esc>OR *
 map! <kPlus> +
 map! <Esc>OS -
 
+" Hashrockets!
+imap <C-L> <space>=><space>
