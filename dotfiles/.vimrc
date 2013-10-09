@@ -107,7 +107,7 @@ endif
 " for all MacVims
 if has("macunix")
   " allow the usage of the option key
-  set macmeta
+  " set macmeta
 end
 
 " disable balloon popup since theres a plugin that makes it really annoying
