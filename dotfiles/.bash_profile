@@ -29,13 +29,13 @@ case $unamestr in
     export ARCHFLAGS="-arch x86_64"
 
     # Tell compiler to use multiple cores
-    export MAKEFLAGS="-j`sysctl hw.ncpu | cut --delimiter=' ' -f 2`"
+    export MAKEFLAGS="-j`sysctl hw.ncpu | cut -d ' ' -f 2`"
 
     # set vim as pager for manual
     #export MANPAGER='col -bx | vim -c ":set ft=man nonu nolist" -R -'
 
-    if [ -f `brew --prefix`/etc/bash-completion ]; then
-      source `brew --prefix`/etc/bash-completion
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+      source `brew --prefix`/etc/bash_completion
     fi
 
     # Add homebrew bash completion file
