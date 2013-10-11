@@ -187,3 +187,6 @@
 [submodule "dotfiles/.vim/bundle/plugin-fontdetect"]
 	path = dotfiles/.vim/bundle/plugin-fontdetect
 	url = https://github.com/drmikehenry/vim-fontdetect.git
+[submodule "dotfiles/.vim/bundle/ack"]
+	path = dotfiles/.vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim
