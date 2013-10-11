@@ -113,3 +113,8 @@ export RUBY_FREE_MIN=200000
 
 # load up aliases and functions
 source ~/.bash_aliases
+
+
+if [ -f ~/.drush_bashrc ] ; then
+    . ~/.drush_bashrc
+fi

@@ -9,28 +9,33 @@ _vim_ctags() {
   prev="${COMP_WORDS[COMP_CWORD-1]}"
 
   case "${prev}" in
-    -t) 
+    -t)
       while [ `pwd` != "/" ]; do
         if [ -r ./tags ]; then
-          # Escape slashes to avoid confusing awk 
+          # Escape slashes to avoid confusing awk
           cur=${cur////\\/}
 
           COMPREPLY=( $(compgen -W "`awk -v ORS=" "  "/^${cur}/ { print \\$1 }" tags`" ) )
           return
-        fi                                                                                                             
+        fi
 
         cd ..
       done
 
       return
-      ;;  
-    *)  
+      ;;
+    *)
       # Perform usual completion mode
-      ;;  
+      ;;
   esac
-}   
-       
+}
+
 # Files matching this pattern are excluded
 excludelist='*.@(o|O|so|SO|so.!(conf)|SO.!(CONF)|a|A|rpm|RPM|deb|DEB|gif|GIF|jp?(e)g|JP?(E)G|mp3|MP3|mp?(e)g|MP?(E)G|avi|AVI|as'
-       
+
 complete -F _vim_ctags -f -X "${excludelist}" vi vim gvim rvim view rview rgvim rgview gview :e
+
+# if [ -f ~/.bashrc.local ]; then
+#   source ~/.bashrc.local
+# fi
+
