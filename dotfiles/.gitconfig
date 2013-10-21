@@ -99,3 +99,7 @@
   sslVerify = false
 [gui]
 	recentrepo = /Users/acook/Projects/vr/Oceans
+
+[github]
+  user = ogredude
+  token = 6de51a7a6826669e83d9f443549d928e1c4f5447

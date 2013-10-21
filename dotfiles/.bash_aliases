@@ -52,3 +52,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [[ -n `command -v ack-grep` ]]; then
   alias ack='ack-grep'
 fi
+
+alias all2unix="grep -lIUr --exclude-dir='.git' '' . | xargs sed -i 's///'"
+alias themepatch="git apply --check --ignore-whitespace ~/profiles/build-commercehawk/artisteer4_drupal.patch && git apply --ignore-whitespace ~/profiles/build-commercehawk/artisteer4_drupal.patch"
